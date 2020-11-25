@@ -1,0 +1,332 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://screen.gd" type="Script" id=1]
+[ext_resource path="res://board.gd" type="Script" id=2]
+[ext_resource path="res://Unknown-7.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://CutiveMono.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 170
+outline_size = 7
+outline_color = Color( 0, 1, 0.0117647, 1 )
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "interploate"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+outline_size = 2
+outline_color = Color( 0, 1, 0.0117647, 1 )
+use_filter = true
+font_data = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="screen" type="ColorRect" parent="."]
+margin_right = 800.0
+margin_bottom = 1280.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="verlineleft" type="ColorRect" parent="screen"]
+anchor_left = 0.344
+anchor_top = 0.039
+anchor_right = 0.356
+anchor_bottom = 0.582
+margin_left = -0.200012
+margin_top = 0.079998
+margin_right = 0.199982
+margin_bottom = 0.039978
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="verlineright" type="ColorRect" parent="screen"]
+anchor_left = 0.637
+anchor_top = 0.039
+anchor_right = 0.65
+anchor_bottom = 0.582
+margin_left = 0.399994
+margin_top = 0.079998
+margin_bottom = 0.039978
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="horlinebot" type="ColorRect" parent="screen"]
+anchor_left = 0.062
+anchor_top = 0.398
+anchor_right = 0.931
+anchor_bottom = 0.406
+margin_left = 0.399998
+margin_top = 0.559967
+margin_right = 0.199951
+margin_bottom = 0.319946
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="horlinetop" type="ColorRect" parent="screen"]
+anchor_left = 0.062
+anchor_top = 0.215
+anchor_right = 0.931
+anchor_bottom = 0.223
+margin_left = 0.399998
+margin_top = -0.200012
+margin_right = 0.199951
+margin_bottom = -0.440002
+color = Color( 0.968627, 0.968627, 0.968627, 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="screen"]
+anchor_left = 0.062
+anchor_top = 0.039
+anchor_right = 0.344
+anchor_bottom = 0.215
+margin_left = 0.399998
+margin_top = 0.079998
+margin_right = -0.200012
+margin_bottom = -0.200012
+toggle_mode = true
+shortcut_in_tooltip = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="screen"]
+anchor_left = 0.356
+anchor_top = 0.039
+anchor_right = 0.637
+anchor_bottom = 0.215
+margin_left = 0.199982
+margin_top = 0.079998
+margin_right = 0.399994
+margin_bottom = -0.200012
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="screen"]
+anchor_left = 0.65
+anchor_top = 0.039
+anchor_right = 0.931
+anchor_bottom = 0.215
+margin_top = 0.079998
+margin_right = 0.199951
+margin_bottom = -0.200012
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton6" type="TextureButton" parent="screen"]
+anchor_left = 0.65
+anchor_top = 0.223
+anchor_right = 0.931
+anchor_bottom = 0.399
+margin_left = -0.23999
+margin_top = -0.830994
+margin_right = -0.0400391
+margin_bottom = -1.11102
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="screen"]
+anchor_left = 0.062
+anchor_top = 0.223
+anchor_right = 0.344
+anchor_bottom = 0.398
+margin_left = 0.399998
+margin_top = -0.440002
+margin_right = -0.200012
+margin_bottom = 0.559967
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="screen"]
+anchor_left = 0.356
+anchor_top = 0.223
+anchor_right = 0.637
+anchor_bottom = 0.398
+margin_left = 0.199982
+margin_top = -0.440002
+margin_right = 0.399994
+margin_bottom = 0.559967
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton7" type="TextureButton" parent="screen"]
+anchor_left = 0.062
+anchor_top = 0.406
+anchor_right = 0.344
+anchor_bottom = 0.582
+margin_left = 0.399998
+margin_top = 0.319946
+margin_right = -0.200012
+margin_bottom = 0.039978
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton8" type="TextureButton" parent="screen"]
+anchor_left = 0.356
+anchor_top = 0.406
+anchor_right = 0.637
+anchor_bottom = 0.582
+margin_left = 0.199982
+margin_top = 0.319946
+margin_right = 0.399994
+margin_bottom = 0.039978
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton9" type="TextureButton" parent="screen"]
+anchor_left = 0.651
+anchor_top = 0.406
+anchor_right = 0.931
+anchor_bottom = 0.582
+margin_left = -0.800049
+margin_top = 0.319946
+margin_right = 0.199951
+margin_bottom = 0.039978
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="result" type="ColorRect" parent="screen"]
+visible = false
+anchor_left = 0.005
+anchor_top = 0.712
+anchor_right = 1.0
+anchor_bottom = 0.995
+margin_left = -1.0
+margin_top = 0.640015
+margin_bottom = 0.399902
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="replay" type="TextureButton" parent="screen/result"]
+anchor_left = 0.72
+anchor_top = 0.331
+anchor_right = 0.996
+anchor_bottom = 0.981
+margin_left = 0.159973
+margin_top = 0.177986
+margin_right = 3.18799
+margin_bottom = -0.122009
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="screen/result"]
+anchor_top = -0.257
+anchor_right = 0.992
+anchor_bottom = 0.262
+margin_left = -3.0
+margin_top = 0.0339966
+margin_right = 3.39954
+margin_bottom = 0.155991
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="screen/result/Label"]
+autoplay = "interploate"
+anims/interploate = SubResource( 3 )
+
+[node name="Label2" type="Label" parent="screen/result"]
+anchor_left = 0.018
+anchor_top = 0.334
+anchor_right = 0.992
+anchor_bottom = 0.997
+margin_left = -0.400008
+margin_top = 0.0919952
+margin_right = 0.399536
+margin_bottom = 1.086
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.878431, 0.839216, 0.839216, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "your wins-
+AI wins-
+draws-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="screen"]
+wait_time = 2.0
+
+[node name="response" type="Timer" parent="screen"]
+wait_time = 0.5
+
+[node name="Label3" type="Label" parent="screen"]
+anchor_top = 0.598
+anchor_right = 1.0
+anchor_bottom = 0.659
+margin_left = 4.0
+margin_top = 0.559937
+margin_right = 4.0
+margin_bottom = 0.47998
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.878431, 0.839216, 0.839216, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Training the AI"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="screen/TextureButton" to="screen" method="_on_TextureButton_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton2" to="screen" method="_on_TextureButton2_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton3" to="screen" method="_on_TextureButton3_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton6" to="screen" method="_on_TextureButton6_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton4" to="screen" method="_on_TextureButton4_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton5" to="screen" method="_on_TextureButton5_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton7" to="screen" method="_on_TextureButton7_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton8" to="screen" method="_on_TextureButton8_gui_input"]
+[connection signal="gui_input" from="screen/TextureButton9" to="screen" method="_on_TextureButton9_gui_input"]
+[connection signal="gui_input" from="screen/result/replay" to="screen" method="_on_replay_gui_input"]
+[connection signal="timeout" from="screen/Timer" to="screen" method="_on_Timer_timeout"]
+[connection signal="timeout" from="screen/response" to="screen" method="_on_response_timeout"]

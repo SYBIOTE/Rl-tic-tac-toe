@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://iconfinder_play_button_3855622.png" type="Texture" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://CutiveMono.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 125
+outline_size = 7
+outline_color = Color( 0, 1, 0.0117647, 1 )
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_size = 4
+outline_color = Color( 0, 1, 0.0117647, 1 )
+use_filter = true
+font_data = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="main" type="ColorRect" parent="."]
+margin_right = 800.0
+margin_bottom = 1280.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="main"]
+anchor_left = 0.18
+anchor_top = 0.396
+anchor_right = 0.82
+anchor_bottom = 0.796
+margin_top = 0.119965
+margin_right = -6.10352e-05
+margin_bottom = 0.119934
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="main"]
+anchor_top = 0.016
+anchor_right = 1.0
+anchor_bottom = 0.347
+margin_left = -1.0
+margin_top = 0.519999
+margin_bottom = -69.16
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.937255, 0.937255, 0.937255, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = " Tic-
+    Tac-
+       Toe"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="main"]
+anchor_left = 0.489
+anchor_top = 0.892
+anchor_right = 0.984
+anchor_bottom = 1.0
+margin_left = 0.0959778
+margin_top = 0.0999756
+margin_right = 0.0960083
+margin_bottom = -1.14001
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "made by 
+Rahul Ghosh"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="main"]
+visible = false
+anchor_left = 0.327
+anchor_top = 0.824
+anchor_right = 0.777
+anchor_bottom = 0.888
+margin_left = 0.399994
+margin_top = 0.179932
+margin_right = 0.399963
+margin_bottom = 0.259888
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
+custom_colors/font_outline_modulate = Color( 0.996078, 0.996078, 0.996078, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "loading..."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="main"]
+[connection signal="gui_input" from="main/TextureRect" to="main" method="_on_TextureRect_gui_input"]
+[connection signal="timeout" from="main/Timer" to="main" method="_on_Timer_timeout"]
