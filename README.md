@@ -1,5 +1,5 @@
 # Rl-tic-tac-toe
-A tic-tac-toe game ,the opponent utilizes a reinforcemnet learning agent.
+A tic-tac-toe game ,the opponent utilizes a reinforcement learning agent.
 play in browser at https://sybiote.itch.io/tic-tac-toe
 
 # Licensing 
